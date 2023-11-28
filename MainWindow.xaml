@@ -1,0 +1,51 @@
+﻿<Window x:Class="Contact_Manager_Final_Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Contact_Manager_Final_Project"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FFBEE5C6">
+        <TextBox x:Name="LastName_txt" HorizontalAlignment="Left" Margin="111,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="FirstName_txt" HorizontalAlignment="Left" Margin="111,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Email_txt" HorizontalAlignment="Left" Margin="111,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PhoneNumber_txt" HorizontalAlignment="Left" Margin="111,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="FirstName_lbl" Content="First Name:" HorizontalAlignment="Left" Margin="27,17,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LastName_lbl" Content="Last Name:" HorizontalAlignment="Left" Margin="28,65,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Email_lbl" Content="E-mail:" HorizontalAlignment="Left" Margin="51,116,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PhoneNumber_lbl" Content="Phone number:" HorizontalAlignment="Left" Margin="6,168,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="AddContact_btn" Content="Add Contact" HorizontalAlignment="Left" Margin="85,217,0,0" VerticalAlignment="Top" Click="AddContact_btn_Click"/>
+        <Button x:Name="FindByFirstName_btn" Content="Find Contact By First Name" HorizontalAlignment="Left" Margin="96,288,0,0" VerticalAlignment="Top" Click="FindByFirstName_btn_Click"/>
+        <Button x:Name="EditContact_btn" Content="Edit Contact" HorizontalAlignment="Left" Margin="27,326,0,0" VerticalAlignment="Top" Click="EditContact_btn_Click"/>
+        <Label x:Name="EditContactInfo_lbl" 
+       Content="Enter the name of the contact you want to delete, find or edit. For editing, enter the new info in the four textboxes (leave empty the infos you want to keep the same)" 
+       HorizontalAlignment="Left" 
+       Margin="64,346,0,0" 
+       VerticalAlignment="Top" 
+       Width="212" 
+       Height="66" FontFamily="Arial Narrow" Background="#FFBEE5C6" Foreground="#FFD41E1E">
+            <Label.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" TextWrapping="Wrap"/>
+                </DataTemplate>
+            </Label.ContentTemplate>
+        </Label>
+        <TextBox x:Name="EditContact_txt" HorizontalAlignment="Left" Margin="110,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="DeleteContact_btn" Content="Delete Contact" HorizontalAlignment="Left" Margin="245,326,0,0" VerticalAlignment="Top" Click="DeleteContact_btn_Click"/>
+        <Label x:Name="DisplayAll_lbl" Content="" HorizontalAlignment="Left" Margin="255,13,0,0" VerticalAlignment="Top" Height="125" Width="521" Background="#FFEDE8E8">
+            <Label.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" TextWrapping="Wrap"/>
+                </DataTemplate>
+            </Label.ContentTemplate>
+        </Label>
+        <Button x:Name="DisplayAll_btn" Content="Display All" HorizontalAlignment="Left" Margin="486,157,0,0" VerticalAlignment="Top" Click="DisplayAll_btn_Click"/>
+        <TextBox x:Name="CSV_txt" HorizontalAlignment="Left" Margin="464,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249" Text="Enter file path"/>
+        <Button x:Name="CSV_btn" Content="Import .csv file" HorizontalAlignment="Left" Margin="464,325,0,0" VerticalAlignment="Top" Click="CSV_btn_Click"/>
+        <Button x:Name="Export_btn" Content="Export Contacts to .csv file" HorizontalAlignment="Left" Margin="569,325,0,0" VerticalAlignment="Top" Click="Export_btn_Click"/>
+        <Button x:Name="NewWindow_btn" Content="Display All in a New WIndow" HorizontalAlignment="Left" Margin="438,212,0,0" VerticalAlignment="Top" Click="NewWindow_btn_Click"/>
+
+
+    </Grid>
+</Window>
